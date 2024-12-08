@@ -1,0 +1,70 @@
+site_name: listmonk / Documentation
+theme:
+  name: material
+  # custom_dir: "mkdocs-material/material"
+  logo: "images/favicon.png"
+  favicon: "images/favicon.png"
+  language: "en"
+  font:
+    text: 'Inter'
+    weights: 400
+  direction: 'ltr'
+  extra:
+  search:
+    language: 'en'
+  feature:
+    tabs: true
+  features:
+    - navigation.indexes
+    - navigation.sections
+    - content.code.copy
+
+  palette:
+    primary: "white"
+    accent: "red"
+
+site_dir: _out
+docs_dir: content
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+
+extra_css:
+  - "static/style.css"
+
+copyright: "CC BY-SA 4.0"
+
+nav:
+  - "Introduction": index.md
+  - "Getting Started":
+    - "Installation": installation.md
+    - "Configuration": configuration.md
+    - "Upgrade": upgrade.md
+  - "Using listmonk":
+    - "Concepts": concepts.md
+    - "Templating": templating.md
+    - "Querying and segmenting subscribers": querying-and-segmentation.md
+    - "Bounce processing": bounces.md
+    - "Messengers": "messengers.md"
+    - "Archives": "archives.md"
+    - "Internationalization": "i18n.md"
+    - "Integrating with external systems": external-integration.md
+  - "API":
+    - "Introduction": apis/apis.md
+    - "SDKs and libs": apis/sdks.md
+    - "Subscribers": apis/subscribers.md
+    - "Lists": apis/lists.md
+    - "Import": apis/import.md
+    - "Campaigns": apis/campaigns.md
+    - "Media": apis/media.md
+    - "Templates": apis/templates.md
+    - "Transactional": apis/transactional.md
+    - "Bounces": apis/bounces.md
+  - "Maintenance":
+    - "Performance": maintenance/performance.md
+  - "Contributions":
+    - "Developer setup": developer-setup.md
